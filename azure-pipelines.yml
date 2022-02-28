@@ -50,7 +50,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'r4rohanpythonappwithazurekubernetes.dev'
+    environment: 'ññññ.dev'
     strategy:
       runOnce:
         deploy:
@@ -59,7 +59,7 @@ stages:
             displayName: Create imagePullSecret
             inputs:
               action: 'createSecret'
-              kubernetesServiceConnection: 'r4rohanpythonappwithazurekubernetes-cloudobrit-cluster-default-1646019380083'
+              kubernetesServiceConnection: 'ññññ-cloudobrit-cluster-default-1646019380083'
               namespace: 'cloudobrit-cluster'
               secretType: 'dockerRegistry'
               secretName: '$(imagePullSecret)'
@@ -69,7 +69,7 @@ stages:
             displayName: Deploy to Kubernetes cluster
             inputs:
               action: 'deploy'
-              kubernetesServiceConnection: 'r4rohanpythonappwithazurekubernetes-cloudobrit-cluster-default-1646019380083'
+              kubernetesServiceConnection: 'ññññ-cloudobrit-cluster-default-1646019380083'
               namespace: 'cloudobrit-cluster'
               manifests: '$(Pipeline.Workspace)/manifests/app.yml'
               containers: '$(containerRegistry)/$(imageRepository):$(tag)'
