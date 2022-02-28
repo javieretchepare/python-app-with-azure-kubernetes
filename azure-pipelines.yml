@@ -7,6 +7,7 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
+  # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'f982163f-efcd-4e90-9346-80af0b921c3f'
   imageRepository: 'pythonapp'
   containerRegistry: 'cloudorbit.azurecr.io'
