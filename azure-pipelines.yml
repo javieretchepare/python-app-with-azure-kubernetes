@@ -53,7 +53,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-  ### environment: 'r4rohanpythonappwithazurekubernetes.dev'
+    environment: 'r4rohanpythonappwithazurekubernetes.dev'
     strategy:
       runOnce:
         deploy:
