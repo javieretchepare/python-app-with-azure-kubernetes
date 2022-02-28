@@ -58,4 +58,5 @@ stages:
               action: 'deploy'
               kubernetesServiceConnection: 'cloudobrit-cluster'
               namespace: 'cloudobrit-cluster'
+              containers: 'cloudobrit'
                            
