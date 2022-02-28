@@ -74,3 +74,4 @@ stages:
               manifests: '$(Pipeline.Workspace)/manifests/app.yml'
               containers: '$(containerRegistry)/$(imageRepository):$(tag)'
               imagePullSecrets: '$(imagePullSecret)'
+              
